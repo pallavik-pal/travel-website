@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Top Bar with Social Icons</title>
+    <link rel="stylesheet" href="a.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Top bar with social media links -->
+    <div class="topbar">
+      <ul class="social-icons">
+        <li>
+          <a href="https://www.instagram.com" target="_blank"
+            ><i class="fab fa-instagram"></i
+          ></a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com" target="_blank"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Page content below the top bar -->
+
+    <div class="navbar">
+      <a href="#home">Home</a>
+      <a href="#trek">Trek</a>
+      <a href="#tour">Tour</a>
+      <a href="#contact">Contact Us</a>
+      <div class="login" onclick="showLoginForm()">
+        <i class="fa-solid fa-user"></i>
+        <div class="login-text">Login</div>
+      </div>
+    </div>
+
+    <!--login icon-->
+    <div id="overlay" class="overlay"></div>
+
+    <!-- Login Form Modal -->
+    <div id="loginForm">
+      <h2>Login</h2>
+      <form id="login">
+        <div>
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required />
+        </div>
+        <div>
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+        <div>
+          <button type="submit">Login</button>
+        </div>
+      </form>
+      <button class="cancel-btn" onclick="hideLoginForm()">Cancel</button>
+    </div>
+    <!----navbar end-->
+
+    <div class="image-container">
+      <img id="slideshow-image" src="a.jpg" class="image" />
+      <div class="search-box-container">
+        <div class="search-fields">
+          <!-- Destination field -->
+          <div>
+            <label for="destination">Destination</label>
+            <input
+              type="text"
+              id="destination"
+              name="destination"
+              placeholder="Enter your destination"
+              required
+            />
+          </div>
+
+          <!-- From Date field -->
+          <div>
+            <label for="fromDate">From</label>
+            <input type="date" id="fromDate" name="fromDate" required />
+          </div>
+
+          <!-- Search Button -->
+          <div>
+            <button type="button" onclick="submitSearch()">Search</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="updates">
+      <h2>UPCOMING TRIPS</h2>
+    </div>
+    <!----footer-->
+    <footer>
+      <div class="container">
+        <!-- Need Help Section -->
+        <div class="footer-section">
+          <h3>Need Help?</h3>
+          <ul>
+            <li>Call Us:<a href="tel:+918317391142">+91 83173 91142</a></li>
+            <li>
+              Email Us:
+              <a href="mailto:nativetrekking06@gmail.com"
+                >nativetrekking06@gmail.com</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Follow Us Section -->
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="https://www.instagram.com" target="_blank"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="https://www.facebook.com" target="_blank"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="https://wa.me/918317391142" target="_blank"
+              ><i class="fab fa-whatsapp"></i
+            ></a>
+          </div>
+        </div>
+
+        <!-- Company Section -->
+        <div class="footer-section">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Treks</a></li>
+            <li><a href="#">Vehicle Rental</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Our Policies Section -->
+        <div class="footer-section">
+          <h3>Our Policies</h3>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Refund & Return Policy</a></li>
+            <li><a href="#">Support</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Copyright Section -->
+      <div class="footer-bottom">
+        <p>&copy; 2024 ABC Travel Experience. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      //images
+      const images = [
+        "a.jpg", // Replace with your actual image paths
+        "a.png",
+        "b.jpg",
+        "c.jpg",
+      ];
+
+      let currentImageIndex = 0;
+
+      // Function to change the image
+      function changeImage() {
+        currentImageIndex = (currentImageIndex + 1) % images.length; // Loop through images
+        const imageElement = document.getElementById("slideshow-image");
+        imageElement.src = images[currentImageIndex]; // Update the image source
+      }
+
+      // Change the image every 5 seconds (5000 milliseconds)
+      setInterval(changeImage, 5000);
+
+      // JavaScript function to show the login form (modal)
+      function showLoginForm() {
+        document.getElementById("loginForm").style.display = "block";
+        document.getElementById("overlay").style.display = "block";
+      }
+
+      // JavaScript function to hide the login form (modal)
+      function hideLoginForm() {
+        document.getElementById("loginForm").style.display = "none";
+        document.getElementById("overlay").style.display = "none";
+      }
+
+      // JavaScript function to simulate the login process
+      document
+        .getElementById("login")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent the form from refreshing the page
+          let username = document.getElementById("username").value;
+          let password = document.getElementById("password").value;
+
+          if (username === "admin" && password === "password123") {
+            alert("Login successful!");
+            hideLoginForm(); // Hide the login form after successful login
+          } else {
+            alert("Invalid username or password!");
+          }
+        });
+
+      function submitSearch() {
+        const destination = document.getElementById("destination").value;
+        const fromDate = document.getElementById("fromDate").value;
+
+        if (destination && fromDate) {
+          alert(`Searching for trips to ${destination} from ${fromDate}`);
+        } else {
+          alert("Please fill all fields.");
+        }
+      }
+    </script>
+  </body>
+</html>

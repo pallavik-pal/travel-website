@@ -1,0 +1,376 @@
+.topbar {
+  background-color: #000;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Styling for social media icons (align to left) */
+.social-icons {
+  list-style: none; /* Remove bullet points */
+  margin: 0;
+  padding: 0;
+  display: flex; /* Use flexbox for positioning */
+  align-items: center; /* Vertically center the icons */
+}
+
+.social-icons li {
+  margin-right: 30px; /* Space between icons */
+}
+
+.social-icons a {
+  color: #fff; /* White color for icons */
+  font-size: 30px; /* Size of the icons */
+  text-decoration: none; /* Remove underline */
+}
+
+.social-icons a:hover {
+  opacity: 0.7; /* Slight fade effect on hover */
+}
+
+/* Optional: Add some margin at the top of the page content to prevent it from being hidden behind the top bar */
+body {
+  margin-top: 60px;
+}
+a {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.navbar {
+  background-color: white;
+  text-align: center;
+  display: flex;
+  justify-items: center;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* Styling the navigation links */
+.navbar a {
+  color: black; /* White color for the text */
+  text-decoration: none; /* Remove underline */
+  margin: 0 15px; /* Space between links */
+  font-size: 24px; /* Font size of the links */
+  font-family: Georgia, 'Times New Roman', Times, serif;
+   padding: 10px 20px; /
+}
+
+/* Hover effect for the links */
+.navbar a:hover {
+  color: blue;
+}
+.login {
+  color: black; /* White color for the icon */
+  font-size: 30px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  cursor: pointer; /* Make the icon clickable */
+}
+.login-text {
+  font-size: 15px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Icon style for Login */
+.login .fa-user {
+  color: black;
+  font-size: 24px;
+ 
+}
+
+/* Login text styling when hovering over the icon */
+.login .login-text {
+  display: none;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  background-color: #333;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Show Login text on hover */
+.login:hover .login-text {
+  display: block;
+}
+
+/* Modal Style */
+#loginForm {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 30px; /* Increased padding for larger modal */
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  width: 400px; /* Increased width for larger modal */
+  z-index: 1000;
+}
+
+/* Modal heading styling */
+#loginForm h2 {
+  margin: 0;
+  padding-bottom: 15px;
+  font-size: 24px; /* Slightly larger font size for heading */
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
+}
+
+/* Input fields inside the modal */
+#loginForm input {
+  width: 100%;
+  padding: 12px; /* Increased padding for input fields */
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Login button style */
+#loginForm button {
+  padding: 12px; /* Increased padding for better button size */
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 10px; /* Space between buttons */
+}
+
+/* Hover effect for login button */
+#loginForm button:hover {
+  background-color: #575757;
+}
+
+/* Overlay background */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+/* Cancel button style */
+.cancel-btn {
+  padding: 12px; /* Increased padding for cancel button */
+  background-color: #ccc;
+  color: white;
+  border: none;
+  border-top-width: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.cancel-btn:hover {
+  background-color: #999;
+}
+.image{
+  height: 500px;
+  width: 100%;
+  object-fit: fill;
+}
+.image-container {
+        position: relative;
+        width: 100%;
+        height: 500px; /* Set a height for the image container */
+        transition: opacity 1s ease-in-out;
+      }
+
+.search-box-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 30px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        transform: translate(-50%, -50%); /* Centering the search box */
+        background-color: rgba(255, 255, 255, 0.95); /* Light background for contrast */
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        width: 80%;
+        height: 10%; /* Adjust the width to your liking */
+        max-width: 800px; /* Max width for the search box */
+      }
+
+      /* Flexbox layout to align all fields in a row */
+      .search-fields {
+        display: flex;
+        justify-content: space-between; /* Space between fields */
+        align-items: center;
+        gap: 10px;
+      }
+
+      /* Input fields styling */
+      .search-box-container input[type="text"],
+      .search-box-container input[type="date"] {
+        padding: 10px;
+        font-size: 16px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        flex-grow: 1;
+        min-width: 150px;
+      }
+
+      /* Search button styling */
+      .search-box-container button {
+        padding: 12px 20px;
+        background-color: #333;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        width: 120px;font-family: Georgia, 'Times New Roman', Times, serif;
+      }
+
+      .search-box-container button:hover {
+        background-color: #575757;
+      }
+
+      h2{
+        text-align: center;
+color: royalblue;
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     footer {
+      background-color: #333;
+      color: white;
+      padding: 40px 20px;
+      font-size: 14px;font-family: Georgia, 'Times New Roman', Times, serif;
+      margin-top: 40px;
+    }
+
+    /* Flexbox Layout for the footer container */
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between; /* Ensure sections are spaced evenly */
+    }
+
+    /* Individual Footer Sections */
+    .footer-section {
+      flex: 1 1 200px; /* Allow sections to grow and shrink */
+      min-width: 200px; /* Ensure sections have a minimum width */
+      margin-bottom: 20px; /* Add space between sections */
+    }
+
+    footer h3 {
+      font-size: 18px;
+      margin-bottom: 15px;
+      font-weight: bold;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      color: #fff;
+    }
+
+    /* Unordered list for links */
+    footer ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    footer ul li {
+      margin-bottom: 10px;
+    }
+
+    footer ul li a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    footer ul li a:hover {
+      color: #ddd;
+    }
+
+    /* Social Media Icon Styling */
+    footer .social-icons {
+      display: flex;
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    footer .social-icons a {
+      font-size: 20px;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      color: white;
+      transition: color 0.3s;
+    }
+
+    footer .social-icons a:hover {
+      color: #ddd;
+    }
+
+    /* Footer Bottom Section (copyright) */
+    .footer-bottom {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 12px;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      border-top: 1px solid #444;
+      padding-top: 15px;
+    }
+
+    /* Need Help Section Adjustments */
+    footer ul li {
+      display: flex;
+      align-items: center; /* Align the text and phone number in a single row */
+    }
+
+    footer ul li a {
+      margin-left: 5px; /* Small space between the label and the link */
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column; /* Stack sections vertically on small screens */
+      }
+
+      .footer-section {
+        flex: 1 1 100%; /* Allow each section to take full width */
+      }
+    }
+  
