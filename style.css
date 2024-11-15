@@ -208,7 +208,7 @@ a {
   
       .search-fields {
         display: flex;
-        justify-content: space-between; /* Space between fields */
+        justify-content: space-between; 
         align-items: center;
         gap: 10px;
       }
@@ -225,7 +225,7 @@ a {
         min-width: 150px;
       }
 
-      /* Search button styling */
+      
       .search-box-container button {
         padding: 12px 20px;
         background-color: #333;
@@ -362,7 +362,7 @@ color: royalblue;
       margin-left: 5px; 
     }
 
-    /* Responsive Design */
+    
     @media (max-width: 768px) {
       .container {
         flex-direction: column; 
