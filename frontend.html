@@ -139,7 +139,7 @@
           </ul>
         </div>
 
-        <!-- Our Policies Section -->
+        <!--  Policies Section -->
         <div class="footer-section">
           <h3>Our Policies</h3>
           <ul>
@@ -172,19 +172,19 @@
       function changeImage() {
         currentImageIndex = (currentImageIndex + 1) % images.length; 
         const imageElement = document.getElementById("slideshow-image");
-        imageElement.src = images[currentImageIndex]; // Update the image source
+        imageElement.src = images[currentImageIndex]; 
       }
 
-      // Change the image every 5 seconds (5000 milliseconds)
+    
       setInterval(changeImage, 5000);
 
-      // JavaScript function to show the login form (modal)
+     
       function showLoginForm() {
         document.getElementById("loginForm").style.display = "block";
         document.getElementById("overlay").style.display = "block";
       }
 
-      // JavaScript function to hide the login form (modal)
+      
       function hideLoginForm() {
         document.getElementById("loginForm").style.display = "none";
         document.getElementById("overlay").style.display = "none";
@@ -194,13 +194,13 @@
       document
         .getElementById("login")
         .addEventListener("submit", function (event) {
-          event.preventDefault(); // Prevent the form from refreshing the page
+          event.preventDefault(); 
           let username = document.getElementById("username").value;
           let password = document.getElementById("password").value;
 
           if (username === "admin" && password === "password123") {
             alert("Login successful!");
-            hideLoginForm(); // Hide the login form after successful login
+            hideLoginForm();
           } else {
             alert("Invalid username or password!");
           }
