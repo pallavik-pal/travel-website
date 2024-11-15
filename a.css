@@ -7,30 +7,29 @@
   z-index: 1000;
 }
 
-/* Styling for social media icons (align to left) */
+
 .social-icons {
-  list-style: none; /* Remove bullet points */
+  list-style: none; 
   margin: 0;
   padding: 0;
-  display: flex; /* Use flexbox for positioning */
-  align-items: center; /* Vertically center the icons */
+  display: flex; 
+  align-items: center; 
 }
 
 .social-icons li {
-  margin-right: 30px; /* Space between icons */
+  margin-right: 30px; 
 }
 
 .social-icons a {
-  color: #fff; /* White color for icons */
-  font-size: 30px; /* Size of the icons */
-  text-decoration: none; /* Remove underline */
+  color: #fff;
+  font-size: 30px; 
+  text-decoration: none; 
 }
 
 .social-icons a:hover {
-  opacity: 0.7; /* Slight fade effect on hover */
+  opacity: 0.7; 
 }
 
-/* Optional: Add some margin at the top of the page content to prevent it from being hidden behind the top bar */
 body {
   margin-top: 60px;
 }
@@ -48,12 +47,12 @@ a {
   align-items: center;
 }
 
-/* Styling the navigation links */
+
 .navbar a {
-  color: black; /* White color for the text */
-  text-decoration: none; /* Remove underline */
-  margin: 0 15px; /* Space between links */
-  font-size: 24px; /* Font size of the links */
+  color: black; 
+  text-decoration: none; 
+  margin: 0 15px; 
+  font-size: 24px; 
   font-family: Georgia, 'Times New Roman', Times, serif;
    padding: 10px 20px; /
 }
@@ -63,24 +62,24 @@ a {
   color: blue;
 }
 .login {
-  color: black; /* White color for the icon */
+  color: black;
   font-size: 30px;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  cursor: pointer; /* Make the icon clickable */
+  cursor: pointer;
 }
 .login-text {
   font-size: 15px;
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-/* Icon style for Login */
+
 .login .fa-user {
   color: black;
   font-size: 24px;
  
 }
 
-/* Login text styling when hovering over the icon */
+
 .login .login-text {
   display: none;
   position: absolute;
@@ -94,7 +93,7 @@ a {
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* Show Login text on hover */
+
 .login:hover .login-text {
   display: block;
 }
@@ -107,26 +106,26 @@ a {
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #fff;
-  padding: 30px; /* Increased padding for larger modal */
+  padding: 30px; 
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  width: 400px; /* Increased width for larger modal */
+  width: 400px; 
   z-index: 1000;
 }
 
-/* Modal heading styling */
+
 #loginForm h2 {
   margin: 0;
   padding-bottom: 15px;
-  font-size: 24px; /* Slightly larger font size for heading */
+  font-size: 24px; 
   font-family: Georgia, 'Times New Roman', Times, serif;
   text-align: center;
 }
 
-/* Input fields inside the modal */
+
 #loginForm input {
   width: 100%;
-  padding: 12px; /* Increased padding for input fields */
+  padding: 12px; 
   margin: 10px 0;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -134,16 +133,16 @@ a {
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-/* Login button style */
+
 #loginForm button {
-  padding: 12px; /* Increased padding for better button size */
+  padding: 12px; 
   background-color: #333;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   width: 100%;
-  margin-bottom: 10px; /* Space between buttons */
+  margin-bottom: 10px; 
 }
 
 /* Hover effect for login button */
@@ -151,7 +150,7 @@ a {
   background-color: #575757;
 }
 
-/* Overlay background */
+
 .overlay {
   display: none;
   position: fixed;
@@ -163,9 +162,9 @@ a {
   z-index: 999;
 }
 
-/* Cancel button style */
+
 .cancel-btn {
-  padding: 12px; /* Increased padding for cancel button */
+  padding: 12px; 
   background-color: #ccc;
   color: white;
   border: none;
@@ -186,7 +185,7 @@ a {
 .image-container {
         position: relative;
         width: 100%;
-        height: 500px; /* Set a height for the image container */
+        height: 500px;
         transition: opacity 1s ease-in-out;
       }
 
@@ -196,17 +195,17 @@ a {
         left: 50%;
         font-size: 30px;
         font-family: Georgia, 'Times New Roman', Times, serif;
-        transform: translate(-50%, -50%); /* Centering the search box */
-        background-color: rgba(255, 255, 255, 0.95); /* Light background for contrast */
+        transform: translate(-50%, -50%); 
+        background-color: rgba(255, 255, 255, 0.95); 
         padding: 20px;
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         width: 80%;
-        height: 10%; /* Adjust the width to your liking */
-        max-width: 800px; /* Max width for the search box */
+        height: 10%; 
+        max-width: 800px; 
       }
 
-      /* Flexbox layout to align all fields in a row */
+  
       .search-fields {
         display: flex;
         justify-content: space-between; /* Space between fields */
@@ -282,18 +281,18 @@ color: royalblue;
       margin-top: 40px;
     }
 
-    /* Flexbox Layout for the footer container */
+
     .container {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between; /* Ensure sections are spaced evenly */
+      justify-content: space-between;
     }
 
-    /* Individual Footer Sections */
+  
     .footer-section {
-      flex: 1 1 200px; /* Allow sections to grow and shrink */
-      min-width: 200px; /* Ensure sections have a minimum width */
-      margin-bottom: 20px; /* Add space between sections */
+      flex: 1 1 200px;
+      min-width: 200px; 
+      margin-bottom: 20px; 
     }
 
     footer h3 {
@@ -304,7 +303,7 @@ color: royalblue;
       color: #fff;
     }
 
-    /* Unordered list for links */
+   
     footer ul {
       list-style: none;
       padding: 0;
@@ -325,7 +324,7 @@ color: royalblue;
       color: #ddd;
     }
 
-    /* Social Media Icon Styling */
+   
     footer .social-icons {
       display: flex;
       gap: 15px;
@@ -343,7 +342,7 @@ color: royalblue;
       color: #ddd;
     }
 
-    /* Footer Bottom Section (copyright) */
+    
     .footer-bottom {
       text-align: center;
       margin-top: 30px;
@@ -353,24 +352,24 @@ color: royalblue;
       padding-top: 15px;
     }
 
-    /* Need Help Section Adjustments */
+    
     footer ul li {
       display: flex;
-      align-items: center; /* Align the text and phone number in a single row */
+      align-items: center;
     }
 
     footer ul li a {
-      margin-left: 5px; /* Small space between the label and the link */
+      margin-left: 5px; 
     }
 
     /* Responsive Design */
     @media (max-width: 768px) {
       .container {
-        flex-direction: column; /* Stack sections vertically on small screens */
+        flex-direction: column; 
       }
 
       .footer-section {
-        flex: 1 1 100%; /* Allow each section to take full width */
+        flex: 1 1 100%;
       }
     }
   
